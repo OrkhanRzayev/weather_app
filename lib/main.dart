@@ -1,6 +1,7 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_literals_to_create_immutables, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
+import 'package:weather_app/weather_box.dart';
 
 void main() {
   runApp(MyApp());
@@ -57,6 +58,9 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(icon: Icon(Icons.search), label: ""),
         ],
       ),
+      body: WeatherBox(),
     );
   }
 }
+
+

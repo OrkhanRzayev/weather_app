@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -42,12 +44,19 @@ class _HomePageState extends State<HomePage> {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.check_rounded),
+            icon: Icon(Icons.share),
             color: Color.fromARGB(180, 0, 0, 0),
           )
         ],
       ),
       backgroundColor: Color.fromARGB(255, 253, 250, 241),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: ""),
+        ],
+      ),
     );
   }
 }

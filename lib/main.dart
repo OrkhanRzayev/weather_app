@@ -2,19 +2,20 @@
 
 import 'package:flutter/material.dart';
 import 'package:weather_app/current_weather.dart';
+import 'package:weather_app/models/location.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+ List<Location> locations = [ Location('baku', 'azerbaycan')];
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Weahter App',
-      home: CurrentWeather(),
+      home: CurrentWeatherPage(locations, context),
     );
   }
 }

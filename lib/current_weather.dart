@@ -69,7 +69,33 @@ class _CurrentWeatherState extends State<CurrentWeather> {
   Widget weatherBox(Weather _weather) {
     return Column(
       children: [
-        Text('${_weather.temprature}°С'),
+        Container(
+          padding: EdgeInsets.all(20),
+          margin: EdgeInsets.all(20),
+          height: 300,
+          decoration: BoxDecoration(
+              color: Color.fromARGB(255, 68, 65, 240),
+              borderRadius: BorderRadius.all(Radius.circular(10))),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.all(5),
+                      child: Text(
+                        '${_weather.temprature}°С',
+                      ),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
         Text(_weather.description),
         Text('${_weather.humidity}'),
         Text('${_weather.windSpeed}')
